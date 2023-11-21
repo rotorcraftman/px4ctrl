@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="vins_to_mavros"  type="vins_to_mavros_node" name="vins_to_mavros" output="screen">
+        <remap from="~vision_pose" to="/mavros/vision_pose/pose" />
+        <remap from="~odom" to="/vins_estimator/odometry" />
+    </node>
+</launch>
+
